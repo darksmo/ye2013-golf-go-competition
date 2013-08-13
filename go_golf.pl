@@ -1,0 +1,2 @@
+#!perl
+my$X=121;my$m;sub z{my($s,$x,$m)=shift;while($x<$X){$m+=f($x++,$s);}$m;}sub f{my($n,$t,$d)=@_;my$c=substr($t,$n,1);return 0 if $c eq ' '||!$d&& $c ne 'w';return 1 if $c eq 'b';substr($t,$n,1)='b';(!(($n+1)%11)||f($n+1,$t,1))*(!(($n-1)%10)||f($n-1,$t,1))*f($n+11,$t,1)*f($n-11,$t,1);}my$y='b'x11;while(<>){$y.="b$_";}$y=~s/\n/b/g;$y.='b'x11;$d=z($y);my$i=0;while($i<$X){my$ch=substr($y,$i,1);if($ch eq ' '){$b=$y;substr($b,$i,1)='b';if(z($b)>$d){my$y=int($i/11);my$x=$i-($y*11);print"$y $x\n";}}$i++;}
