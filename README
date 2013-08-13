@@ -1,2 +1,4 @@
 Test solution with `perl test.pl` or `prove test.pl` (solution script should be named 'go_golf.pl').
 Check characters count in your solution with `perl golfcount.pl go_golf.pl`.
+
+Original Challenge is described here: http://contest.reg.ru/index.php
